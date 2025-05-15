@@ -11,7 +11,7 @@ flightForm.addEventListener('submit', async (e) => {
   flightInfo.innerHTML = "Loading...";
 
   try {
-    const response = await fetch(`http://api.aviationstack.com/v1/flights?access_key=33e533939eae44ff184ce31be9c0028c&flight_iata=${flightNumber}`);
+    const response = await fetch(`http://api.aviationstack.com/v1/flights?access_key=78f780881d82583ba9b69043a17945e2&flight_iata=${flightNumber}`);
     const data = await response.json();
 
     if (data.data && data.data.length > 0) {
@@ -29,7 +29,7 @@ flightForm.addEventListener('submit', async (e) => {
       flightInfo.innerHTML = "No flight information found.";
     }
   } catch (error) {
-    flightInfo.innerHTML = "Error fetching flight data.";
+    flightInfo.innerHTML = "Error fetching flight data. Recheck credentials";
   }
 
   flightInfo.classList.remove('hidden');
