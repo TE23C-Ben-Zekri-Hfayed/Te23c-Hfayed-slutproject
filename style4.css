@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+ 
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background: linear-gradient(135deg, #0f9b0f, #00ff95);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #0f9b0f, #00d88f);
+    transform: scale(1.05);
+  }
+  
+
+  #flightInfo {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+
+#sidePanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(-240px); 
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  
+  #sidePanel.active {
+    transform: translateX(0);
+  }
+  
+  #sidePanel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  #sidePanel ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #sidePanel ul li {
+    margin: 10px 0;
+  }
+  
+  #sidePanel ul a {
+    color: #00c6ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #sidePanel ul a:hover {
+    color: #fff;
+  }
+  
+  
+  #openPanel {
+    position: absolute;
+    top: 20px;
+    right: -46px;
+    background: #00c6ff;
+    border: none;
+    padding: 10px 12px;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  #openPanel:hover {
+    background-color: rgb(0, 128, 255);
+  }
+
+  #introScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #50089c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    animation: fadeOut 1s forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+ 
+  #introText {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 3rem;
+    animation: flipInX 0.3s ease-out, flipOutX 0.3s ease-out 0,1s forwards; 
+  }
+  
+  @keyframes flipInX {
+    0% {
+      transform: rotateX(90deg);
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes flipOutX {
+    0% {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: rotateX(-90deg);
+      opacity: 0;
+    }
+  }
+  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="introScreen">
+        <h1 id="introText">Currency Converter</h1>
+      </div>
+
+  <!-- Side Panel -->
+  <div id="sidePanel">
+    <button class="info-btn" id="infoButton">🛈</button>
+    <div id="infoText" class="info-text hidden"><b>Exchange currency in real time.</b></div>
+  
+    <button id="openPanel">☰</button>
+    <h2>Explore other Tools 🔧</h2>
+    <ul>
+    <li><a href="./index.html">Weather Checker</a></li>
+      <li><a href="./index3.html">Unit Converter</a></li>
+      <li><a href="./index4.html">Flight Tracker</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>💸 Currency Converter</h1>
+
+    <label for="currencyInput">Amount:</label>
+    <input type="number" id="currencyInput" placeholder="Amount" />
+
+    <label for="currencyFrom">From:</label>
+    <select id="currencyFrom">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+      <option value="AUD">AUD</option>
+    </select>
+
+    <label for="currencyTo">To:</label>
+    <select id="currencyTo">
+      <option value="EUR">EUR</option>
+      <option value="USD">USD</option>
+      <option value="GBP">GBP</option>
+      <option value="JPY">JPY</option>
+      <option value="AUD">AUD</option>
+    </select>
+
+    <button id="getCurrencyBtn">Convert</button>
+
+    <div id="currencyBox">
+      <p id="convertedAmount"></p>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

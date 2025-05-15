@@ -1,0 +1,98 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unit Converter</title>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style3.css">
+    </head>
+    <body>
+    
+        <div id="introScreen">
+            <h1 id="introText">Unit Converter</h1>
+        </div>
+
+    <!-- Side Panel -->
+    <div id="sidePanel">
+        <button class="info-btn" id="infoButton">🛈</button>
+        <div id="infoText" class="info-text hidden"><b>Convert units</b></div>
+    
+        <button id="openPanel">☰</button>
+        <h2>Explore other Tools 🔧</h2>
+        <ul>
+        <li><a href="./index.html">Weather Checker</a></li>
+        <li><a href="./index2.html">Currency Converter</a></li>
+        <li><a href="./index4.html">Flight Tracker</a></li>
+        </ul>
+    </div>
+
+        <div class="container">
+            <h1>Unit Converter</h1>
+
+            <!-- Length Conversion -->
+            <div class="unit-section">
+                <h2>Length Conversion</h2>
+                <input type="number" id="lengthValue" placeholder="Enter value" />
+                <select id="lengthFrom">
+                    <option value="meters">Meters</option>
+                    <option value="kilometers">Kilometers</option>
+                    <option value="miles">Miles</option>
+                    <option value="yards">Yards</option>
+                </select>
+                <span>to</span>
+                <select id="lengthTo">
+                    <option value="kilometers">Kilometers</option>
+                    <option value="meters">Meters</option>
+                    <option value="miles">Miles</option>
+                    <option value="yards">Yards</option>
+                </select>
+                <button id="lengthConvert">Convert</button>
+                <p id="lengthResult"></p>
+            </div>
+
+            <!-- Weight Conversion -->
+            <div class="unit-section">
+                <h2>Weight Conversion</h2>
+                <input type="number" id="weightValue" placeholder="Enter value" />
+                <select id="weightFrom">
+                    <option value="kilograms">Kilograms</option>
+                    <option value="grams">Grams</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="ounces">Ounces</option>
+                </select>
+                <span>to</span>
+                <select id="weightTo">
+                    <option value="grams">Grams</option>
+                    <option value="kilograms">Kilograms</option>
+                    <option value="pounds">Pounds</option>
+                    <option value="ounces">Ounces</option>
+                </select>
+                <button id="weightConvert">Convert</button>
+                <p id="weightResult"></p>
+            </div>
+
+            <!-- Temperature Conversion -->
+            <div class="unit-section">
+                <h2>Temperature Conversion</h2>
+                <input type="number" id="tempValue" placeholder="Enter value" />
+                <select id="tempFrom">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+                <span>to</span>
+                <select id="tempTo">
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+                <button id="tempConvert">Convert</button>
+                <p id="tempResult"></p>
+            </div>
+
+        </div>
+
+        <script src="script3.js"></script>
+    </body>
+    </html>

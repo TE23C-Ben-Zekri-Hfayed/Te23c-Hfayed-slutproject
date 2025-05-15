@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&display=swap');
+
+body {
+  transition: background-image 1s ease, transform 1s ease;
+  background-image: linear-gradient(to bottom, #fceabb, #f8b500);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transform: translateY(-100px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp { /* från w2schools */
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#introScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00c6ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Flip animation only for the h1 */
+#introText {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  animation: flipInX 0.3s ease-out, flipOutX 0.3s ease-out 0,1s forwards; 
+}
+
+@keyframes flipInX {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOutX {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+}
+
+#sidePanel {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 280px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 999;
+  transform: translateX(-100%);
+  animation: panelSlideIn 0.5s ease-out forwards;
+}
+
+@keyframes panelSlideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#sidePanel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+#sidePanel ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidePanel ul li {
+  margin: 10px 0;
+}
+
+#sidePanel ul a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#sidePanel ul a:hover {
+  color: #fff;
+}
+
+#openPanel {
+  position: absolute;
+  top: 20px;
+  right: -46px;
+  background: #00c6ff;
+  border: none;
+  padding: 10px 12px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+}
+
+#openPanel:hover {
+  background-color: rgb(0, 128, 255);
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #00c6ff;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: scale(1.1);
+}
+
+#weatherBox {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn { /* från w2schools */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.info-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+  display: none;
+  animation: fadeInX 0.4s ease forwards;
+}
+
+.info-text.visible {
+  display: block;
+}
+
+@keyframes fadeInX { /* från w2schools */
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+

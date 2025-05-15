@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <div id="introScreen">
+        <h1 id="introText">Flight Tracker</h1>
+      </div>
+
+<!-- Side Panel -->
+<div id="sidePanel">
+    <h2>Tools</h2>
+    <ul>
+        <li><a href="index.html">Weather Checker</a></li>
+        <li><a href="index2.html">Currency Converter</a></li>
+        <li><a href="index3.html">Units Converter</a></li>
+    </ul>
+    <button id="openPanel">&#9776;</button>
+</div>
+
+
+    <div class="container">
+        <h1>Flight Tracker</h1>
+        <form id="flightForm">
+            <input type="text" id="flightNumber" placeholder="Enter Flight IATA Code (e.g. LH2019)" required>
+            <button type="submit">Track Flight</button>
+        </form>
+        <div id="flightInfo" class="hidden"></div>
+    </div>
+    <script src="script4.js"></script>
+</body>
+</html>

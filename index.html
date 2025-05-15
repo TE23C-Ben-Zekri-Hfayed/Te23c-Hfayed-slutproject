@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="introScreen">
+    <h1 id="introText">Weather Checker</h1>
+  </div>
+  
+  
+  <div id="sidePanel">
+    <button class="info-btn" id="infoButton">🛈</button>
+    <div id="infoText" class="info-text hidden"><b>Top color indicates the sky's status. <br> Bottom color indicates temperature intensity</b></div>
+  
+    <button id="openPanel">☰</button>
+    <h2>Explore other Tools 🔧</h2>
+    <ul>
+      <li><a href="./index2.html">Currency Converter</a></li>
+      <li><a href="./index3.html">Unit Converter</a></li>
+      <li><a href="./index4.html">Flight Tracker</a></li>
+    </ul>
+  </div>
+
+  
+  <div class="container">
+    
+    <h1>🌤️ Weather Checker</h1>
+    <input type="text" id="cityInput" placeholder="Enter a city or country" />
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weatherBox" class="hidden">
+      <h2 id="cityName"></h2>
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  
+
+
+
+</body>
+</html>
